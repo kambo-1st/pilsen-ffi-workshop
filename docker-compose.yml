@@ -1,8 +1,6 @@
 version: '2'
 services:
   cli:
-    build:
-      context: .
     security_opt:
       - seccomp:unconfined
     cap_add:
