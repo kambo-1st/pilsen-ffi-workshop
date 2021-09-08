@@ -1,0 +1,12 @@
+version: '2'
+services:
+  cli:
+    build:
+      context: .
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    image: kambo22/php-ffi-workshop
+    volumes:
+      - .:/home/dev/DuckDBFFI
