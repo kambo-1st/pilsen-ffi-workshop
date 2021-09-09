@@ -1,5 +1,9 @@
 <?php
 
+// Generate headers
+// echo '#define FFI_LIB "./libduckdb.so"' >> duckdb-ffi.h    
+// cpp -P -C -D"__attribute__(ARGS)=" duckdb.h >> duckdb-ffi.h
+
 
 
 /*
