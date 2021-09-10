@@ -1,10 +1,5 @@
 <?php
 
-// Generate headers
-// echo '#define FFI_LIB "./libduckdb.so"' >> duckdb-ffi.h    
-// cpp -P -C -D"__attribute__(ARGS)=" duckdb.h >> duckdb-ffi.h
-
-
 
 /*
 #include "duckdb.h"
@@ -71,3 +66,15 @@ int main() {
 }
 
 */
+
+// Generate headers
+// echo '#define FFI_LIB "./libduckdb.so"' >> duckdb-ffi.h
+// cpp -P -C -D"__attribute__(ARGS)=" duckdb.h >> duckdb-ffi.h
+
+// Memory leaks detections
+// valgrind --leak-check=full php duckdb.php
+
+// GDB
+// gdb --args php duckdb.php
+// source /data/php-src/.gdbinit
+// (gdb) dump_bt executor_globals.current_execute_data
